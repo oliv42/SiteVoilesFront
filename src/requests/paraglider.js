@@ -1,8 +1,8 @@
 import apiAxios from ".";
 
-export async function requestParaglidingList() {
+export async function requestParagliderList() {
     try {
-        const response = await apiAxios.get('/paragliding');
+        const response = await apiAxios.get('/paraglider');
         return response;
     } catch (error) {
         console.log(error.response);
