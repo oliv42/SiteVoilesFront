@@ -18,8 +18,7 @@ function MainGrid() {
     
 
     return (
-        <div>
-            <h2>Main grild</h2>
+        <div className='flex flex-wrap gap-5'>
             {paraglidingList.map((paragliding, key) => {
                 const  {id, name, type, release_year} = paragliding;
                return <Card key={key} id={id} name={name} type={type} releaseYear={release_year}/>
