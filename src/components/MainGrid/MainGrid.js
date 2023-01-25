@@ -11,7 +11,10 @@ function MainGrid() {
     const [paragliderList, setParagliderList] = useState([]);
 
     useEffect(() => {
-        fetchParaliderList().then((res) => setParagliderList(res.data));
+        fetchParaliderList().then((paraliderList) => {
+            const shuffledParaliderList = paraliderList.data.sort((a, b) => 0.5 - Math.random());
+            setParagliderList(shuffledParaliderList);
+        });
     }, []);
 
     return (
