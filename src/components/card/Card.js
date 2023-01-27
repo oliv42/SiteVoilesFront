@@ -17,7 +17,7 @@ function Card(props) {
                     {props.name}
                     {isNew ? <div className="badge badge-secondary">NEW</div> : <div></div>}
                 </h2>
-                <h3 className="text-left">{props.maker_name}</h3>
+                <h3 className="text-left">{props.maker}</h3>
                 <div className="card-actions justify-end">
                     <div className="badge badge-outline">{props.type}</div>
                     {props.releaseYear ? (
