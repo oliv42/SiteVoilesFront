@@ -20,7 +20,7 @@ function MainGrid() {
     return (
         <div className="flex flex-wrap gap-5">
             {paragliderList.map((paraglider, key) => {
-                const { id, name, type, release_year, maker } = paraglider;
+                const { id, name, type, release_year, maker, photos } = paraglider;
                 return (
                     <Card
                         key={key}
@@ -29,6 +29,7 @@ function MainGrid() {
                         type={type}
                         releaseYear={release_year}
                         maker={maker}
+                        photos={photos[0]}
                     />
                 );
             })}

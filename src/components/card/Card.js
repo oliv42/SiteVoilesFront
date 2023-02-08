@@ -1,16 +1,16 @@
 function Card(props) {
-
     const curentYear = new Date().getFullYear();
+    const imageDefaut =
+        "https://i0.hippopx.com/photos/702/245/215/paraglider-paragliding-fly-dom-preview.jpg";
+
     const yearOfPargliding = parseInt(props.releaseYear) || 1985;
     const isNew = curentYear > yearOfPargliding ? false : true;
+    const cardImage = props.photos[0] || imageDefaut;
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl border-4">
             <figure>
-                <img
-                    src="https://i0.hippopx.com/photos/702/245/215/paraglider-paragliding-fly-dom-preview.jpg"
-                    alt="Shoes"
-                />
+                <img src={cardImage} alt="Images Paraglider" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">
