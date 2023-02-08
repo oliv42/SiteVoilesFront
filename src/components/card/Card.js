@@ -1,14 +1,14 @@
 function Card(props) {
-    const curentYear = new Date().getFullYear();
-    const imageDefaut =
+    const currentYear = new Date().getFullYear();
+    const imageDefault =
         "https://i0.hippopx.com/photos/702/245/215/paraglider-paragliding-fly-dom-preview.jpg";
 
-    const yearOfPargliding = parseInt(props.releaseYear) || 1985;
-    const isNew = curentYear > yearOfPargliding ? false : true;
-    const cardImage = props.photos[0] || imageDefaut;
+    const yearOfParagliding = parseInt(props.releaseYear) || 1985;
+    const isNew = currentYear > yearOfParagliding ? false : true;
+    const cardImage = props.photos[0] || imageDefault;
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl border-4">
+        <div className="border-4 shadow-xl card w-96 bg-base-100">
             <figure>
                 <img src={cardImage} alt="Images Paraglider" />
             </figure>
@@ -18,7 +18,7 @@ function Card(props) {
                     {isNew ? <div className="badge badge-secondary">NEW</div> : <div></div>}
                 </h2>
                 <h3 className="text-left">{props.maker}</h3>
-                <div className="card-actions justify-end">
+                <div className="justify-end card-actions">
                     <div className="badge badge-outline">{props.type}</div>
                     {props.releaseYear ? (
                         <div className="badge badge-outline">{props.releaseYear}</div>

@@ -3,7 +3,7 @@ import { requestParagliderList } from "../../requests/paraglider";
 import Card from "../card/Card";
 
 function MainGrid() {
-    const fetchParaliderList = async function () {
+    const fetchParagliderList = async function () {
         const paragliderList = await requestParagliderList();
         return paragliderList;
     };
@@ -11,9 +11,9 @@ function MainGrid() {
     const [paragliderList, setParagliderList] = useState([]);
 
     useEffect(() => {
-        fetchParaliderList().then((paraliderList) => {
-            const shuffledParaliderList = paraliderList.data.sort((a, b) => 0.5 - Math.random());
-            setParagliderList(shuffledParaliderList);
+        fetchParagliderList().then((paragliderList) => {
+            const shuffledParagliderList = paragliderList.data.sort((a, b) => 0.5 - Math.random());
+            setParagliderList(shuffledParagliderList);
         });
     }, []);
 
