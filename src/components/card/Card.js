@@ -1,4 +1,4 @@
-function Card(props) {
+export function Card(props) {
     const currentYear = new Date().getFullYear();
     const imageDefault =
         "https://i0.hippopx.com/photos/702/245/215/paraglider-paragliding-fly-dom-preview.jpg";
@@ -30,5 +30,3 @@ function Card(props) {
         </div>
     );
 }
-
-export default Card;

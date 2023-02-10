@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { requestParagliderList } from "../../requests/paraglider";
-import Card from "../card/Card";
+import { Card } from "../card/Card";
 
-function MainGrid() {
+export function MainGrid() {
     const fetchParagliderList = async function () {
         const paragliderList = await requestParagliderList();
         return paragliderList;
@@ -36,5 +36,3 @@ function MainGrid() {
         </div>
     );
 }
-
-export default MainGrid;
